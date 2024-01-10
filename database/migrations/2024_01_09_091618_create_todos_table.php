@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('todos', function (Blueprint $table) {
             $table->id();
             $table->string('task');
-            $table->boolean('id_completed')->default(false);
+            $table->boolean('is_completed')->default(false);
             $table->timestamps();
         });
     }
